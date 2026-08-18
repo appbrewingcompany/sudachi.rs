@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build rust document
         # build document of lib only for now to avoid name collision.
@@ -19,7 +19,7 @@ jobs:
         run: mv ./target/doc ./docs/rust
 
       - name: Setup python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.11'
       - name: Install dependencies

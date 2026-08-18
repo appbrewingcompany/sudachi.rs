@@ -18,7 +18,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Download dictionary
         run: bash fetch_dictionary.sh "20220519" "core"
       - name: Run tests (Debug)
